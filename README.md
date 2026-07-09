@@ -7,6 +7,7 @@ It does not fork or modify 2FAuth. The repo only provides Docker defaults that V
 - official image: `2fauth/2fauth:latest`
 - app port: `8000`
 - SQLite volume
+- explicit `DB_CONNECTION=sqlite` with the upstream Docker sqlite path
 - generated `APP_KEY`
 - generated public `APP_URL`
 - trusted proxy defaults
