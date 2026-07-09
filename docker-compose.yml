@@ -21,11 +21,6 @@ services:
       TRUSTED_PROXIES: "*"
     volumes:
       - 2fauth-data:/2fauth
-    healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8000/ >/dev/null || exit 1"]
-      interval: 30s
-      timeout: 5s
-      retries: 5
 
 volumes:
   2fauth-data:

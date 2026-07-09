@@ -11,6 +11,7 @@ It does not fork or modify 2FAuth. The repo only provides Docker defaults that V
 - generated `APP_KEY`
 - generated public `APP_URL`
 - trusted proxy defaults
+- no custom Docker healthcheck, so Coolify/VibeNest route validation uses the public HTTP route instead of an image-local curl dependency
 
 ## VibeNest notes
 
