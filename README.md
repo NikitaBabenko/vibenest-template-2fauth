@@ -8,11 +8,14 @@ It does not fork or modify 2FAuth. The repo only provides Docker defaults that V
 - app port: `8000`
 - SQLite volume
 - generated `APP_KEY`
-- trusted proxy and app URL placeholders
+- generated public `APP_URL`
+- trusted proxy defaults
 
 ## VibeNest notes
 
-One-click deploy stays disabled until the recipe generates `APP_KEY`, sets `APP_URL` from the final VibeNest subdomain, opens the public setup screen, and documents backup expectations for token data.
+The `.env.example` intentionally declares `APP_KEY=` and `APP_URL=` as empty values. VibeNest reads those during a compose deploy, generates a valid Laravel `APP_KEY`, and injects the final VibeNest subdomain as `APP_URL`.
+
+One-click deploy stays disabled until the adapter opens the public setup screen and the catalog copy documents backup expectations for token data.
 
 ## Upstream
 
